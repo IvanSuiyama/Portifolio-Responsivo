@@ -205,13 +205,15 @@ i.menu-mobile{
 }
 
 .cv .cv-item h4 {
-    line-height: 18px;
+    line-height: 1.4; /* Ajuste o line-height para aumentar o espaço vertical */
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     color: #050d18;
     margin-bottom: 10px;
+    letter-spacing: 1px; /* Adiciona espaço entre as letras */
 }
+
 
 .cv .cv-item h5 {
     background-color: #e4edf9 ;
@@ -234,4 +236,13 @@ i.menu-mobile{
     border-radius: 50%;
 }
 
+
+.subtitle-card{
+    font-size: 20px;
+}
+
+
+.text-card-porti{
+    font-size: 15px;
+}
 
