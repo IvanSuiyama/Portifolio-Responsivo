@@ -9,3 +9,9 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+
+
+'''
+Colocar uma foto mais profissional, adicionar
+mecanismo de enviar email, adcionar listas de type e Java,
+listas de javascript,'''
