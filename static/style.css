@@ -23,8 +23,10 @@ html, body{
     margin: 15px auto;
     display: block;
     width: 120px;
+    height: 120px;
     border: 8px solid #2c2f3f;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 #header .profile h1{
@@ -35,7 +37,6 @@ html, body{
     text-align: center;
     color: #fff;
 }
-
 
 #header .profile .social-links a{
     font-size: 1rem;
@@ -78,7 +79,6 @@ html, body{
     color: #fff;
 }
 
-
 .nav-menu a:hover i, 
 .nav-menu .active i, 
 .nav-menu .active:focus i, 
@@ -96,14 +96,12 @@ section#inicio {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-
     width: 100%;
     height: 100vh;
 }
 
 section#inicio h2{
     font-size: 6rem;
-
 }
 
 section#inicio span#subtitle{
@@ -124,7 +122,6 @@ section#inicio div#arraste a{
     color: #fff;
 }
 
-
 i.menu-mobile{
     position: fixed;
     color: #fff;
@@ -141,7 +138,6 @@ i.menu-mobile{
     justify-content: center;
     align-items: center;
 }
-
 
 .menu-nav-active{
     overflow: hidden;
@@ -161,7 +157,6 @@ i.menu-mobile{
     section#inicio h2{
         font-size: 3.5rem;
     }
-
     section#inicio span#subtitle{
         margin-right: 0;
         font-size: 1rem;
@@ -183,7 +178,6 @@ i.menu-mobile{
 
 *::-webkit-scrollbar-thumb{
     background-color: #149ddd;
-    
 }
 
 .section-bg{
@@ -205,15 +199,14 @@ i.menu-mobile{
 }
 
 .cv .cv-item h4 {
-    line-height: 1.4; /* Ajuste o line-height para aumentar o espaço vertical */
+    line-height: 1.4;
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     color: #050d18;
     margin-bottom: 10px;
-    letter-spacing: 1px; /* Adiciona espaço entre as letras */
+    letter-spacing: 1px;
 }
-
 
 .cv .cv-item h5 {
     background-color: #e4edf9 ;
@@ -222,7 +215,6 @@ i.menu-mobile{
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 
 .cv .cv-item::before{
     content: "";
@@ -236,13 +228,104 @@ i.menu-mobile{
     border-radius: 50%;
 }
 
-
 .subtitle-card{
     font-size: 20px;
 }
-
 
 .text-card-porti{
     font-size: 15px;
 }
 
+/* ===== ESTILOS DO FORMULÁRIO DE CONTATO ===== */
+
+/* Mensagem de status (sucesso/erro) */
+.status-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.status-message.show {
+    display: block;
+}
+
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Animação para a mensagem de status */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão de envio desabilitado */
+.btn-enviar:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Estilo para o card de informações */
+#contato .info {
+    margin-top: 1rem;
+}
+
+#contato .info p {
+    font-size: 0.95rem;
+}
+
+/* Responsividade do formulário */
+@media (max-width: 768px) {
+    #contato .card {
+        padding: 2rem !important;
+    }
+}
+
+/* Estilos para as imagens do app no portfólio */
+.app-screenshot-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Desktop: mostrar imagens inteiras sem zoom */
+@media (min-width: 768px) {
+    .app-screenshot-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        clip-path: inset(1.5% 0 1.5% 0);
+    }
+}
+
+/* Mobile: cortar barras superior e inferior */
+@media (max-width: 767px) {
+    .app-screenshot-container img {
+        position: absolute;
+        top: -8%;
+        left: 0;
+        width: 100%;
+        height: 116%;
+        object-fit: cover;
+    }
+}
