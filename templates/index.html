@@ -72,17 +72,17 @@
             <div class="row w-100">
                 <div class="col md-12">
                     <h2 class="pt-3">Sobre</h2>
-                       <p>Sou uma pessoa persistente, responsável e com perfil de liderança, sempre motivado a transformar o mundo por meio do desenvolvimento de programas, sites e aplicativos. Busco constantemente novos desafios para aprimorar minhas habilidades técnicas e comportamentais, utilizando minha criatividade para encontrar soluções inovadoras e eficientes para os problemas que enfrento.
+                       <p id="sobre-text">Sou uma pessoa persistente, responsável e com perfil de liderança, sempre motivado a transformar o mundo por meio do desenvolvimento de programas, sites e aplicativos. Busco constantemente novos desafios para aprimorar minhas habilidades técnicas e comportamentais, utilizando minha criatividade para encontrar soluções inovadoras e eficientes para os problemas que enfrento.
                     </p>
 
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col-md-4">
+                <div class="col-md-4 zoom-in">
                     <img class="img-fluid shadow mb-2" src="../static/img/imagemTop.jpg" alt="foto perfil">
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-8 slide-up">
                     <h3>Estudante de Desenvolvimento de softaware multiplataforma</h3>
                     <p>Atualmente estudo programação na FATEC,
                         Faculdade Tecnologica Prof Jessen Vidal</p>
@@ -285,7 +285,7 @@
                     <!-- Linha 1 - Projetos visíveis -->
                     <div class="row row-cols-1 row-cols-md-2 g-4"><!-- Início da linha 1 -->
                         <div class="col"><!-- Início da coluna 1 -->
-                            <div class="card h-100">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0">
                                 <div class="card-img-top" style="width:100%; height:250px; min-height:250px; display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:2px; background:#000; overflow:hidden;">
                                     <div class="app-screenshot-container">
                                         <img src="../static/img/app1.jpeg" alt="App screenshot 1">
@@ -318,7 +318,7 @@
                             </div>
                         </div><!-- Fim da coluna 1 -->
                         <div class="col"><!-- Início da coluna 2 -->
-                            <div class="card h-100">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.2">
                                 <img src="../static/img/photo_Estacao.png" class="card-img-top" alt="Sistema de controle para estação meteorológica" style="object-fit:cover; object-position: left center; width:100%; height:250px;">
                                 <div class="card-body">
                                     <h5 class="card-title">Sistema de Controle para Estação Meteorológica</h5>
@@ -342,7 +342,7 @@
                     <!-- Linha 2 - Projetos visíveis -->
                     <div class="row row-cols-1 row-cols-md-2 g-4 mt-4"><!-- Início da linha 2 -->
                         <div class="col"><!-- Início da coluna 1 -->
-                            <div class="card h-100">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.25">
                                 <img src="../static/img/portal.png" class="card-img-top" alt="api2">
                                 <div class="card-body">
                                     <h5 class="card-title">Portal de transparência</h5>
@@ -362,7 +362,7 @@
                             </div>
                         </div><!-- Fim da coluna 1 -->
                         <div class="col"><!-- Início da coluna 2 -->
-                            <div class="card h-100">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.35">
                                 <img src="../static/img/foto-api2.jpg" class="card-img-top" alt="api2">
                                 <div class="card-body">
                                     <h5 class="card-title">Sistema de Gerenciamento de Chamados</h5>
@@ -386,7 +386,7 @@
                     <!-- Linha 2 - Comentada (projetos futuros) -->
                     <div class="row row-cols-1 row-cols-md-2 g-4 mt-4"><!-- Início da linha 2 -->
                         <div class="col"><!-- Início da coluna 1 -->
-                           <div class="card h-100">
+                           <div class="card h-100 slide-up portfolio-card" data-delay="0.45">
                                 <img src="../static/img/foto-python1.png" class="card-img-top" alt="python1">
                                 <div class="card-body">
                                     <h5 class="card-title">Exercícios em Python para praticar</h5>
@@ -404,7 +404,24 @@
                             </div>
                         </div><!-- Fim da coluna 1 -->
                         <div class="col"><!-- Início da coluna 2 -->
-                            <!-- Projeto futuro aqui -->
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.45">
+                                <div style="width:100%; height:260px; background:#000; display:flex; align-items:center; justify-content:center;">
+                                    <img src="../static/img/12.png" alt="Listas_java" style="max-width:100%; max-height:100%; object-fit:contain;">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Listas de Java com springboot</h5>
+                                    <p class="card-text">Listas de Java para praticar e por em prova o conhecimento adiquirido em sala de aula</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">Java, Spring Boot</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="https://github.com/IvanSuiyama/ATV_AUTOBOTS_novo" target="_blank" class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div><!-- Fim da coluna 2 -->
                     </div><!-- Fim da linha 2 -->
 
@@ -441,7 +458,7 @@
                 <div class="row">
 
                     <div class="col-md-12">
-                        <div class="card p-5 shadow border-0 h-100">
+                        <div class="card p-5 shadow border-0 h-100 slide-up">
                             <h4 class="mb-3"><i class="bi bi-chat-dots"></i> Envie uma mensagem para o email ivan.suiya@gmail.com</h4>
 
                             <form id="contact-form">
