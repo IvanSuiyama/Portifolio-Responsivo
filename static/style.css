@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root {
+    --background-primary: #0d1117;
+    --background-secondary: #161b22;
+    --highlight: #58a6ff;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -9,6 +17,8 @@ html, body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
 }
 
 #header{
@@ -16,7 +26,7 @@ html, body{
     top: 0;
     left: 0;
     bottom: 0;
-    background: #021124;
+    background: var(--background-secondary);
     overflow-y: hidden;
     width: 300px;
     transition: all ease-in-out 0.5s;
@@ -40,13 +50,13 @@ html, body{
     padding: 0;
     font-weight: 600;
     text-align: center;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 #header .profile .social-links a{
     font-size: 1rem;
-    background-color: #212431;
-    color: #fff;
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
     padding: 0.6rem;
     margin-right: 1rem;
     border-radius: 50%;
@@ -55,7 +65,16 @@ html, body{
 }
 
 #header .profile .social-links a:hover{
-    background: #149ddd;
+    background: var(--highlight);
+}
+
+/* Alterar a cor da borda dos ícones de GitHub e LinkedIn */
+#header .profile .social-links a {
+    border: 2px solid #4ea8de; /* Azul mais claro */
+}
+
+#header .profile .social-links a:hover {
+    border-color: #58a6ff; /* Azul de destaque no hover */
 }
 
 .nav-menu{
@@ -65,7 +84,7 @@ html, body{
 .nav-menu a, .nav-menu a:focus{
     display: flex;
     align-items: center;
-    color: #a8a9b4;
+    color: var(--text-secondary);
     transition: 0.3s;
     font-size: 15px;
 }
@@ -81,14 +100,14 @@ html, body{
 .nav-menu .active:focus, 
 .nav-menu li:hover > a{
     text-decoration: none;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 .nav-menu a:hover i, 
 .nav-menu .active i, 
 .nav-menu .active:focus i, 
 .nav-menu li:hover > a i{
-    color:#149ddd;
+    color: var(--highlight);
 }
 
 #main{
@@ -124,13 +143,13 @@ section#inicio div#arraste {
 
 section#inicio div#arraste a{
     text-decoration: none;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 i.menu-mobile{
     position: fixed;
     color: #fff;
-    background-color: #021124;
+    background-color: var(--background-secondary);
     right: 1rem;
     top: 1rem;
     font-size: 1.5rem;
@@ -186,20 +205,20 @@ i.menu-mobile{
 }
 
 .section-bg{
-    background-color: #eff5ff;
+    background-color: var(--background-secondary);
 }
 
 .cv .cv-title{
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #050d18 ;
+    color: var(--text-primary);
 }
 
 .cv .cv-item{
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid #1f5297;
+    border-left: 2px solid var(--highlight);
     position: relative;
 }
 
@@ -208,13 +227,13 @@ i.menu-mobile{
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #050d18;
+    color: var(--text-primary);
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
 .cv .cv-item h5 {
-    background-color: #e4edf9 ;
+    background-color: var(--background-secondary);
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -228,8 +247,8 @@ i.menu-mobile{
     left: -9px;
     width: 16px;
     height: 16px;
-    border: 2px solid #1f5297;
-    background-color: #fff;
+    border: 2px solid var(--highlight);
+    background-color: var(--background-primary);
     border-radius: 50%;
 }
 
@@ -510,3 +529,73 @@ i.menu-mobile{
 .portfolio-card {
     transition-delay: 0s;
 }
+
+/* Ajustes para seções com fundo branco */
+#sobre, #curriculo {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+}
+
+#curriculo .cv-item h5 {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+}
+
+#curriculo .cv-item {
+    border-left: 2px solid var(--highlight);
+}
+
+/* Ajuste para fundo e texto das informações do 'Sobre' */
+#sobre .list-group-item {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+}
+
+
+/* Ajuste para fundo do currículo */
+#curriculo {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+/* Ajuste para os cards do portfólio */
+.portfolio-card {
+    background-color: #1e242e; /* Cinza escuro mais claro */
+    color: var(--text-primary);
+    border: 1px solid var(--background-secondary);
+    transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Reduzir o tempo de transição */
+}
+
+.portfolio-card:hover {
+    background-color: var(--background-secondary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fundo da div externa ao formulário na seção de contato */
+#contato .card {
+    background-color: var(--background-primary);
+}
+
+/* Cor do botão de envio para verde */
+#contato .btn-enviar {
+    background-color: #28a745; /* Verde */
+    border-color: #28a745;
+}
+
+#contato .btn-enviar:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+    border-color: #1e7e34;
+}
+
+/* Garantir que o texto na div externa ao formulário seja branco */
+#contato .card {
+    color: var(--text-primary);
+}
+
+/* Destacar a borda do card na seção de contato */
+#contato .card {
+    border: 2px solid var(--highlight); /* Borda mais visível com a cor de destaque */
+}
+
+
+
