@@ -532,7 +532,7 @@ i.menu-mobile{
 
 /* Ajustes para seções com fundo branco */
 #sobre, #curriculo {
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     color: var(--text-primary);
 }
 
