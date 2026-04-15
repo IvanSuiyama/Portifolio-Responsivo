@@ -101,62 +101,6 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Aplicar efeito de digitação ao carregar a página
-document.addEventListener('DOMContentLoaded', () => {
-    // Efeito no subtítulo da home
-    const subtitle = document.querySelector('#subtitle');
-    if (subtitle) {
-        const originalText = subtitle.textContent;
-        setTimeout(() => {
-            typeWriter(subtitle, originalText, 80);
-        }, 500);
-    }
-    
-    // Efeito de digitação na seção sobre (quando entrar no viewport)
-    const sobreText = document.querySelector('#sobre-text');
-    if (sobreText) {
-        const originalText = sobreText.textContent.trim();
-        const sobreObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.dataset.typed) {
-                    entry.target.dataset.typed = 'true';
-                    setTimeout(() => {
-                        // Começar com metade da primeira linha (~80 caracteres)
-                        const startPosition = Math.min(80, Math.floor(originalText.length * 0.15));
-                        const initialText = originalText.substring(0, startPosition);
-                        const remainingText = originalText.substring(startPosition);
-                        
-                        entry.target.textContent = initialText;
-                        
-                        // Continuar digitando o restante
-                        let i = 0;
-                        const cursor = document.createElement('span');
-                        cursor.className = 'typewriter-cursor';
-                        entry.target.classList.add('typewriter');
-                        entry.target.appendChild(cursor);
-                        
-                        function type() {
-                            if (i < remainingText.length) {
-                                const char = remainingText.charAt(i);
-                                const textNode = document.createTextNode(char);
-                                entry.target.insertBefore(textNode, cursor);
-                                i++;
-                                setTimeout(type, 8);
-                            } else {
-                                entry.target.classList.add('finished');
-                            }
-                        }
-                        
-                        type();
-                    }, 300);
-                    sobreObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        sobreObserver.observe(sobreText);
-    }
-});
 
 // ===== INTERSECTION OBSERVER PARA ANIMAÇÕES AO SCROLL =====
 const observerOptions = {
